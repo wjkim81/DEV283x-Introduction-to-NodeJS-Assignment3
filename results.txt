@@ -1,0 +1,22 @@
+$ mongo
+MongoDB shell version v3.4.10
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.4.10
+Server has startup warnings: 
+2017-12-28T12:49:17.294+0900 I CONTROL  [initandlisten] 
+2017-12-28T12:49:17.294+0900 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-12-28T12:49:17.294+0900 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-12-28T12:49:17.294+0900 I CONTROL  [initandlisten] 
+> show dbs
+admin            0.000GB
+edx-assignment3  0.000GB
+edx-course-db    0.002GB
+local            0.000GB
+test             0.000GB
+> use edx-assignment3
+switched to db edx-assignment3
+> db.customers.find().count()
+1000
+ > db.customers.find().forEach(function(doc){print(tojson(doc, '', true));});
+-> This shows the results of all documents in ‘customers’ collection in edx-assignment3 db.
+
