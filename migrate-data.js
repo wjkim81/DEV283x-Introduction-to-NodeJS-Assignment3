@@ -34,7 +34,7 @@ mongodb.MongoClient.connect(url, (error, db) => {
       
       //console.log(`[tasks] ${start} - ${end}`)
       tasks.push(function(callback) {
-        console.log(`Processing ${start} - ${end}`)
+        console.log(`Updating cutomers data from ${start} to ${end-1}`)
         //console.log(customers.slice(start, end));
         db.collection('customers').insert(customers.slice(start, end), (insertErr, result) => {
           callback(insertErr, result);
